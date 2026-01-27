@@ -1,5 +1,4 @@
 ---
-<<<<<<< HEAD
 title: Customer Churn Prediction API
 emoji: 🔮
 colorFrom: blue
@@ -40,18 +39,6 @@ Visit `/docs` for interactive API documentation and testing!
 - Docker
 - Pydantic
 
-## 📫 Contact
+## 📫 Created By
 
-Created by Hasitha Dilshan - hasithab66@gmail.com
-=======
-title: Churn Prediction Api
-emoji: 🏢
-colorFrom: green
-colorTo: pink
-sdk: docker
-pinned: false
-license: mit
----
-
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
->>>>>>> 2555b3d3ae877cd6e9a3b13eaed3626a585ef8cf
+Hasitha Dilshan - MLOps Learning Project
