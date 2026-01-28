@@ -22,12 +22,13 @@ with open(model_path, 'rb') as f:
 def home():
     return {"message": "Churn Prediction API",
             "model": type(model).__name__,
-            "version": "1.0.0",
+            "version": "2.0.0",
             "endpoints": {
                 "predict": "/predict",
                 "health": "/health",
                 "docs": "/docs"
-                }
+                },
+                "ci_cd": "Automated with GitHub Actions"
     }
 
 @app.get("/health")
