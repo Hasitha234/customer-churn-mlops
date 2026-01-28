@@ -1,3 +1,4 @@
+@"
 fastapi
 uvicorn
 mlflow
@@ -5,3 +6,4 @@ scikit-learn==1.8.0
 pandas
 numpy
 pydantic
+"@ | Out-File -FilePath requirements.txt -Encoding UTF8
