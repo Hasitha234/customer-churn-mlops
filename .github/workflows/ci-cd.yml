@@ -41,10 +41,15 @@ jobs:
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     
     steps:
-    - name: Checkout code
+    - name: Checkout code with full history
       uses: actions/checkout@v3
       with:
+        fetch-depth: 0  # Full history, not shallow
         lfs: true
+    
+    - name: Setup Git LFS
+      run: |
+        git lfs install
     
     - name: Deploy to Hugging Face
       env:
@@ -52,4 +57,5 @@ jobs:
       run: |
         git config --global user.email "github-actions@github.com"
         git config --global user.name "GitHub Actions"
-        git push https://HasithaDilshan:$HF_TOKEN@huggingface.co/spaces/HasithaDilshan/churn-prediction-api main --force
+        git remote add hf https://HasithaDilshan:$HF_TOKEN@huggingface.co/spaces/HasithaDilshan/churn-prediction-api || true
+        git push hf main --force
